@@ -13,6 +13,7 @@ options = list(us_df.columns[3:])
 
 # Building Dashboard Application
 app = dash.Dash(external_stylesheets=[dbc.themes.CYBORG])
+server = app.server
 controls = dbc.Card(
     [html.Div(
         [
@@ -162,4 +163,4 @@ def make_graph(state):
 
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run(debug=True)
